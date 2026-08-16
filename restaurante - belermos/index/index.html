@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es" class="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belermos - Restaurante de Carnes & Parrillas</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO Y NAVEGACIÓN -->
+  <header>
+    <div class="brand">
+      <img src="img/logo.png.jpg" alt="Belermos Logo" class="logo-img">
+      <div class="tagline">CARNES & PARRILLAS</div>
+    </div>
+    <nav>
+      <a href="#reservas" data-i18n="nav-reservar">Reservar</a>
+      <a href="#promos" data-i18n="nav-promos">Promociones</a>
+      <a href="#contacto" data-i18n="nav-contacto">Ubicación</a>
+      <button class="lang-btn" onclick="toggleLang()" data-i18n="lang-btn">🇺🇸 EN</button>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN PRINCIPAL / HERO -->
+  <section class="hero">
+    <div class="hero-badge" data-i18n="hero-badge">📍 Calle Moquegua 1092</div>
+  </section>
+
+  <!-- BIENVENIDA -->
+  <section class="welcome">
+    <h1 class="welcome-title" data-i18n="welcome-title">Belermos Restaurante</h1>
+    <p class="welcome-desc" data-i18n="welcome-desc">Las mejores carnes y parrillas en un ambiente tradicional único con balcón y música en vivo.</p>
+  </section>
+
+  <!-- TARJETAS DE CARACTERÍSTICAS -->
+  <div class="features-grid">
+    <div class="feature-card">
+      <h3 data-i18n="card1-title">🥩 Parrillas</h3>
+      <p data-i18n="card1-desc">Cortes seleccionados a la leña y carbón.</p>
+    </div>
+    <div class="feature-card">
+      <h3 data-i18n="card2-title">🍹 Cocteles</h3>
+      <p data-i18n="card2-desc">Barra especializada y promociones en mojitos.</p>
+    </div>
+    <div class="feature-card">
+      <h3 data-i18n="card3-title">🎶 Música en Vivo</h3>
+      <p data-i18n="card3-desc">Acompañamiento musical para tus veladas.</p>
+    </div>
+    <div class="feature-card">
+      <h3 data-i18n="card4-title">🏛️ Balcón Histórico</h3>
+      <p data-i18n="card4-desc">Ambiente colonial con vista a la ciudad.</p>
+    </div>
+  </div>
+
+  <!-- GALERÍA / FACHADA -->
+  <section class="galeria-section">
+    <h2 class="section-title" data-i18n="galeria-title">Nuestro Local</h2>
+    <p class="section-subtitle" data-i18n="galeria-subtitle">Conoce el ambiente único de Belermos Restaurante</p>
+    <div class="galeria-grid">
+      <img src="img/fachada.jpg.jpg" alt="Fachada Belermos" class="galeria-img">
+      <img src="img/734488770_122100182361377837_1152176889588492293_n.jpg" alt="Interior Belermos" class="galeria-img">
+      <img src="img/727287307_27767425702887046_2844635025453409522_n.jpg" alt="Ambiente Belermos" class="galeria-img">
+    </div>
+  </section>
+
+  <!-- BANNER DINÁMICO DE EVENTOS -->
+  <section class="banner-section">
+    <h2 class="section-title" data-i18n="banner-title">Próximos Eventos</h2>
+    <p class="section-subtitle" data-i18n="banner-subtitle">Descubre nuestras promociones y eventos especiales</p>
+    <div class="banner-carousel">
+      <img src="img/ban1.jpg" alt="Evento 1" class="banner-slide active">
+      <img src="img/ban2.jpg" alt="Evento 2" class="banner-slide">
+      <img src="img/ban3.jpg" alt="Evento 3" class="banner-slide">
+      <img src="img/ban4.jpg" alt="Evento 4" class="banner-slide">
+      <img src="img/ban5.jpg" alt="Evento 5" class="banner-slide">
+      <button class="banner-btn banner-prev">&#10094;</button>
+      <button class="banner-btn banner-next">&#10095;</button>
+      <div class="banner-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE RESERVAS -->
+  <section id="reservas">
+    <h2 class="section-title" data-i18n="reservas-title">Reserva tu Mesa</h2>
+    <p class="section-subtitle" data-i18n="reservas-subtitle">Completa el formulario y te confirmaremos directamente a tu correo electrónico</p>
+
+    <div class="reserva-box">
+      <!-- FORMULARIO CONFIGURADO CON TU CORREO -->
+      <form action="https://formsubmit.co/Restaurantebelermos@gmail.com" method="POST">
+        
+        <input type="hidden" name="_subject" value="¡Nueva Reserva de Mesa - Belermos Restaurante!">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-group">
+          <label for="nombre" data-i18n="label-nombre">Nombre Completo *</label>
+          <input type="text" id="nombre" name="Cliente" placeholder="Ej. Juan Pérez" data-i18n-placeholder="placeholder-nombre" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email" data-i18n="label-email">Correo Electrónico *</label>
+            <input type="email" id="email" name="Correo" value="Restaurantebelermos@gmail.com" readonly required>
+          </div>
+          <div class="form-group">
+            <label for="telefono" data-i18n="label-telefono">Teléfono / WhatsApp *</label>
+            <input type="tel" id="telefono" name="Telefono" value="953 919 255" readonly required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fecha" data-i18n="label-fecha">Fecha de Reserva *</label>
+            <input type="date" id="fecha" name="Fecha" required>
+          </div>
+          <div class="form-group">
+            <label for="hora" data-i18n="label-hora">Hora de Reserva *</label>
+            <select id="hora" name="Hora" required>
+              <option value="" disabled selected data-i18n="hora-placeholder">Selecciona hora</option>
+              <option value="12:30 PM">12:30 PM <span data-i18n="almuerzo">(Almuerzo)</span></option>
+              <option value="01:30 PM">01:30 PM <span data-i18n="almuerzo">(Almuerzo)</span></option>
+              <option value="02:30 PM">02:30 PM <span data-i18n="almuerzo">(Almuerzo)</span></option>
+              <option value="07:30 PM">07:30 PM <span data-i18n="cena">(Cena)</span></option>
+              <option value="08:30 PM">08:30 PM <span data-i18n="cena">(Cena)</span></option>
+              <option value="09:30 PM">09:30 PM <span data-i18n="cena">(Cena)</span></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="personas" data-i18n="label-personas">N° Personas *</label>
+            <input type="number" id="personas" name="Personas" min="1" max="20" value="2" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="zona" data-i18n="label-zona">Preferencia de Zona</label>
+          <select id="zona" name="Zona Preferida">
+            <option value="Sin preferencia" data-i18n="zona-default">Sin preferencia</option>
+            <option value="Balcón colonial" data-i18n="zona-balcon">Balcón colonial (Vista)</option>
+            <option value="Salón principal" data-i18n="zona-salon">Salón principal</option>
+            <option value="Zona Lounge / Sillones" data-i18n="zona-lounge">Zona Lounge / Sillones</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="notas" data-i18n="label-notas">Ocasión Especial / Comentarios</label>
+          <textarea id="notas" name="Notas" rows="3" placeholder="Ej. Celebración de cumpleaños, silla para bebé, requerimientos especiales..." data-i18n-placeholder="placeholder-notas"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" data-i18n="btn-submit">Confirmar Reserva</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE PROMOCIONES -->
+  <section id="promos" class="promo-section">
+    <h2 class="section-title" data-i18n="promos-title">Promociones Especiales</h2>
+    <p class="section-subtitle" data-i18n="promos-subtitle">Aprovecha nuestras ofertas al reservar tu mesa</p>
+
+    <div class="promo-grid">
+      <div class="promo-card">
+        <h4 data-i18n="promo1-title">🥤 Refresco Gratis</h4>
+        <p data-i18n="promo1-desc">Obtén un refresco de la casa sin costo adicional por tu consumo en almuerzos.</p>
+      </div>
+      <div class="promo-card">
+        <h4>🍸 Mojitos 2 x S/ 30</h4>
+        <p data-i18n="promo2-desc">Disfruta de nuestros mejores mojitos preparados al momento en la barra.</p>
+      </div>
+      <div class="promo-card">
+        <h4 data-i18n="promo3-title">🎂 Celebra tu Cumpleaños</h4>
+        <p data-i18n="promo3-desc">Atención personalizada, reservas para grupos y detalles especiales para el cumpleañero.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE RESEÑAS -->
+  <section class="reviews-section">
+    <h2 class="section-title" data-i18n="reviews-title">Lo Que Dicen Nuestros Clientes</h2>
+    <p class="section-subtitle" data-i18n="reviews-subtitle">Reseñas reales de Google Maps y TripAdvisor</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="review1-text">"La mejor parrilla de la ciudad! La carne estaba en su punto perfecto y el balcón colonial le da un encanto único. Volveremos sin duda."</p>
+        <div class="review-author">
+          <span class="review-name">Carlos M.</span>
+          <span class="review-source">⭐⭐ Google Maps</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="review2-text">"Excelente atención y ambiente. Los mojitos son increíbles y la música en vivo crea una velada perfecta. Muy recomendado."</p>
+        <div class="review-author">
+          <span class="review-name">María G.</span>
+          <span class="review-source">⭐⭐ TripAdvisor</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="review3-text">"Un lugar espectacular. Comida deliciosa, precios justos y un servicio de primera. El ambiente del balcón histórico es mágico."</p>
+        <div class="review-author">
+          <span class="review-name">Jorge L.</span>
+          <span class="review-source">⭐⭐ Google Maps</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA / UBICACIÓN -->
+  <section class="map-section">
+    <h2 class="section-title" data-i18n="map-title">Cómo Llegar</h2>
+    <p class="section-subtitle" data-i18n="map-subtitle">Encuéntranos en Calle Moquegua 1092</p>
+    <div class="map-container">
+      <div class="map-label">
+        <span class="map-label-name">Belermos Restaurante</span>
+        <span class="map-label-addr">📍 Calle Moquegua 1092</span>
+      </div>
+      <iframe src="https://www.google.com/maps?q=Belermos+Restaurante+Calle+Moquegua+1092&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA / CONTACTO -->
+  <footer id="contacto">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4 data-i18n="footer-col1-title">Belermos Restaurante</h4>
+        <p data-i18n="footer-col1-desc">Especialistas en Carnes & Parrillas, Coctelería y momentos inolvidables.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer-col2-title">Contacto & Reservas</h4>
+        <p>📍 Calle Moquegua 1092</p>
+        <p>📞 WhatsApp: 953 919 255</p>
+        <p>✉️ Restaurantebelermos@gmail.com</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer-col3-title">Servicios</h4>
+        <p data-i18n="footer-serv1">• Balcón con vista colonial</p>
+        <p data-i18n="footer-serv2">• Música en vivo</p>
+        <p data-i18n="footer-serv3">• Reservas para eventos y cumpleaños</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer-bottom">&copy; 2026 Belermos Restaurante - Carnes & Parrillas. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+<a href="https://wa.me/51953919255" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+const lang = {
+  es: {
+    'lang-btn': '🇺🇸 EN',
+    'nav-reservar': 'Reservar',
+    'nav-promos': 'Promociones',
+    'nav-contacto': 'Ubicación',
+    'hero-badge': '📍 Calle Moquegua 1092',
+    'welcome-title': 'Belermos Restaurante',
+    'welcome-desc': 'Las mejores carnes y parrillas en un ambiente tradicional único con balcón y música en vivo.',
+    'card1-title': '🥩 Parrillas',
+    'card1-desc': 'Cortes seleccionados a la leña y carbón.',
+    'card2-title': '🍹 Cocteles',
+    'card2-desc': 'Barra especializada y promociones en mojitos.',
+    'card3-title': '🎶 Música en Vivo',
+    'card3-desc': 'Acompañamiento musical para tus veladas.',
+    'card4-title': '🏛️ Balcón Histórico',
+    'card4-desc': 'Ambiente colonial con vista a la ciudad.',
+    'galeria-title': 'Nuestro Local',
+    'galeria-subtitle': 'Conoce el ambiente único de Belermos Restaurante',
+    'reservas-title': 'Reserva tu Mesa',
+    'reservas-subtitle': 'Completa el formulario y te confirmaremos directamente a tu correo electrónico',
+    'label-nombre': 'Nombre Completo *',
+    'placeholder-nombre': 'Ej. Juan Pérez',
+    'label-email': 'Correo Electrónico *',
+    'label-telefono': 'Teléfono / WhatsApp *',
+    'label-fecha': 'Fecha de Reserva *',
+    'label-hora': 'Hora de Reserva *',
+    'hora-placeholder': 'Selecciona hora',
+    'almuerzo': '(Almuerzo)',
+    'cena': '(Cena)',
+    'label-personas': 'N° Personas *',
+    'label-zona': 'Preferencia de Zona',
+    'zona-default': 'Sin preferencia',
+    'zona-balcon': 'Balcón colonial (Vista)',
+    'zona-salon': 'Salón principal',
+    'zona-lounge': 'Zona Lounge / Sillones',
+    'label-notas': 'Ocasión Especial / Comentarios',
+    'placeholder-notas': 'Ej. Celebración de cumpleaños, silla para bebé, requerimientos especiales...',
+    'btn-submit': 'Confirmar Reserva',
+    'promos-title': 'Promociones Especiales',
+    'promos-subtitle': 'Aprovecha nuestras ofertas al reservar tu mesa',
+    'promo1-title': '🥤 Refresco Gratis',
+    'promo1-desc': 'Obtén un refresco de la casa sin costo adicional por tu consumo en almuerzos.',
+    'promo2-desc': 'Disfruta de nuestros mejores mojitos preparados al momento en la barra.',
+    'promo3-title': '🎂 Celebra tu Cumpleaños',
+    'promo3-desc': 'Atención personalizada, reservas para grupos y detalles especiales para el cumpleañero.',
+    'footer-col1-title': 'Belermos Restaurante',
+    'footer-col1-desc': 'Especialistas en Carnes & Parrillas, Coctelería y momentos inolvidables.',
+    'footer-col2-title': 'Contacto & Reservas',
+    'footer-col3-title': 'Servicios',
+    'footer-serv1': '• Balcón con vista colonial',
+    'footer-serv2': '• Música en vivo',
+    'footer-serv3': '• Reservas para eventos y cumpleaños',
+    'reviews-title': 'Lo Que Dicen Nuestros Clientes',
+    'reviews-subtitle': 'Reseñas reales de Google Maps y TripAdvisor',
+    'review1-text': '"La mejor parrilla de la ciudad! La carne estaba en su punto perfecto y el balcón colonial le da un encanto único. Volveremos sin duda."',
+    'review2-text': '"Excelente atención y ambiente. Los mojitos son increíbles y la música en vivo crea una velada perfecta. Muy recomendado."',
+    'review3-text': '"Un lugar espectacular. Comida deliciosa, precios justos y un servicio de primera. El ambiente del balcón histórico es mágico."',
+    'banner-title': 'Próximos Eventos',
+    'banner-subtitle': 'Descubre nuestras promociones y eventos especiales',
+    'map-title': 'Cómo Llegar',
+    'map-subtitle': 'Encuéntranos en Calle Moquegua 1092',
+    'footer-bottom': '© 2026 Belermos Restaurante - Carnes & Parrillas. Todos los derechos reservados.'
+  },
+  en: {
+    'reviews-title': 'What Our Clients Say',
+    'reviews-subtitle': 'Real reviews from Google Maps and TripAdvisor',
+    'review1-text': '"The best grill in the city! The meat was cooked to perfection and the colonial balcony gives it a unique charm. We will definitely return."',
+    'review2-text': '"Excellent service and atmosphere. The mojitos are incredible and the live music creates a perfect evening. Highly recommended."',
+    'review3-text': '"A spectacular place. Delicious food, fair prices, and top-notch service. The historic balcony atmosphere is magical."',
+    'banner-title': 'Upcoming Events',
+    'banner-subtitle': 'Discover our promotions and special events',
+    'map-title': 'How to Get Here',
+    'map-subtitle': 'Find us at Calle Moquegua 1092',
+    'lang-btn': '🇪🇸 ES',
+    'nav-reservar': 'Book Now',
+    'nav-promos': 'Specials',
+    'nav-contacto': 'Location',
+    'hero-badge': '📍 Calle Moquegua 1092',
+    'welcome-title': 'Belermos Restaurant',
+    'welcome-desc': 'The best meats and grills in a unique traditional atmosphere with a balcony and live music.',
+    'card1-title': '🥩 Grills',
+    'card1-desc': 'Selected cuts cooked over wood and charcoal.',
+    'card2-title': '🍹 Cocktails',
+    'card2-desc': 'Specialized bar and mojito promotions.',
+    'card3-title': '🎶 Live Music',
+    'card3-desc': 'Musical accompaniment for your evenings.',
+    'card4-title': '🏛️ Historic Balcony',
+    'card4-desc': 'Colonial atmosphere with a view of the city.',
+    'galeria-title': 'Our Venue',
+    'galeria-subtitle': 'Discover the unique atmosphere of Belermos Restaurant',
+    'reservas-title': 'Book a Table',
+    'reservas-subtitle': 'Complete the form and we will confirm directly to your email',
+    'label-nombre': 'Full Name *',
+    'placeholder-nombre': 'e.g. John Doe',
+    'label-email': 'Email *',
+    'label-telefono': 'Phone / WhatsApp *',
+    'label-fecha': 'Reservation Date *',
+    'label-hora': 'Reservation Time *',
+    'hora-placeholder': 'Select time',
+    'almuerzo': '(Lunch)',
+    'cena': '(Dinner)',
+    'label-personas': 'N° of People *',
+    'label-zona': 'Zone Preference',
+    'zona-default': 'No preference',
+    'zona-balcon': 'Colonial Balcony (View)',
+    'zona-salon': 'Main Hall',
+    'zona-lounge': 'Lounge Area / Sofas',
+    'label-notas': 'Special Occasion / Comments',
+    'placeholder-notas': 'e.g. Birthday celebration, baby chair, special requirements...',
+    'btn-submit': 'Confirm Booking',
+    'promos-title': 'Special Promotions',
+    'promos-subtitle': 'Take advantage of our offers when booking your table',
+    'promo1-title': '🥤 Free Drink',
+    'promo1-desc': 'Get a complimentary house drink with your lunch order.',
+    'promo2-desc': 'Enjoy our best mojitos freshly prepared at the bar.',
+    'promo3-title': '🎂 Celebrate Your Birthday',
+    'promo3-desc': 'Personalized attention, group bookings and special details for the birthday person.',
+    'footer-col1-title': 'Belermos Restaurant',
+    'footer-col1-desc': 'Specialists in Meats & Grills, Cocktails and unforgettable moments.',
+    'footer-col2-title': 'Contact & Bookings',
+    'footer-col3-title': 'Services',
+    'footer-serv1': '• Colonial balcony view',
+    'footer-serv2': '• Live music',
+    'footer-serv3': '• Event and birthday bookings',
+    'footer-bottom': '© 2026 Belermos Restaurante - Carnes & Parrillas. All rights reserved.'
+  }
+};
+
+let slideIndex = 0;
+const slides = document.querySelectorAll('.banner-slide');
+const dots = document.querySelectorAll('.banner-dots .dot');
+
+function showSlide(n) {
+  slides.forEach(s => s.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('active'));
+  slideIndex = (n + slides.length) % slides.length;
+  slides[slideIndex].classList.add('active');
+  dots[slideIndex].classList.add('active');
+}
+
+function nextSlide() { showSlide(slideIndex + 1); }
+function prevSlide() { showSlide(slideIndex - 1); }
+
+document.querySelector('.banner-next')?.addEventListener('click', nextSlide);
+document.querySelector('.banner-prev')?.addEventListener('click', prevSlide);
+dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
+
+setInterval(nextSlide, 4000);
+
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('fecha').setAttribute('min', today);
+
+function toggleLang() {
+  const html = document.documentElement;
+  const current = html.classList.contains('es') ? 'en' : 'es';
+  html.className = current;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (lang[current][key]) el.textContent = lang[current][key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (lang[current][key]) el.placeholder = lang[current][key];
+  });
+}
+</script>
+</body>
+</html>
